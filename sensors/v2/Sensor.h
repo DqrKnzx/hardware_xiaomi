@@ -148,7 +148,7 @@ class UdfpsSensor : public SysfsPollingOneShotSensor {
     UdfpsSensor(int32_t sensorHandle, ISensorsEventCallback* callback)
         : SysfsPollingOneShotSensor(
                   sensorHandle, callback, "/sys/class/touch/touch_dev/fod_press_status",
-                  "/sys/class/touch/touch_dev/fod_longpress_gesture_enabled", "UDFPS Sensor",
+                  "/sys/devices/virtual/touch/touch_dev/fod_press_status", "UDFPS Sensor",
                   "org.lineageos.sensor.udfps",
                   static_cast<SensorType>(static_cast<int32_t>(SensorType::DEVICE_PRIVATE_BASE) +
                                           3)) {}
